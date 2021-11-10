@@ -1,0 +1,29 @@
+form {
+    width: 100%;
+    margin: 0;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    font-size: 2rem;
+    width: 40%;
+}
+
+[type="submit"] {
+    border: 2px solid rgba(0,255,0,0.4);
+    border-radius: 5px;
+}
+
+[type="submit"]:not([disabled]) {
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+
+input[disabled] {
+    color: white;
+    background-color: red;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
