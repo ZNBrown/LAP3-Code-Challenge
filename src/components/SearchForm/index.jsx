@@ -1,5 +1,3 @@
-import { co } from 'co';
-import { cos } from 'prelude-ls';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './style.css';
@@ -29,8 +27,7 @@ export const SearchForm = () => {
 
     return (
     <form onSubmit={handleSubmit} aria-label>
-        <label htmlFor="text">GitHub username</label>
-        <input type="text" id="name"  onChange={handleInput} /> 
+        <input type="text" id="name"  placeholder="Username" onChange={handleInput} /> 
         <input
             type="submit"
             disabled={formAlert}
