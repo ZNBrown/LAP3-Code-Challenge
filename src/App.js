@@ -7,16 +7,14 @@ import {Header, Footer} from './layout'
 
 function App() {
     return (
-        <React.Fragment>
-        <Header/>
         <div id="app">
-            <main>
+            <Header/>
+            <main id="content">
             <Pages.Search/>
             <Repo/>
             </main>
+            <Footer/>
         </div>
-        <Footer/>
-        </React.Fragment>
     )
 }
 
