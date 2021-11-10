@@ -1,18 +1,24 @@
 form {
     width: 100%;
-    margin: 0;
 }
 
 input {
     display: block;
-    margin: 10px auto;
-    font-size: 2rem;
+    margin: 100px auto;
+    font-size: 1rem;
     width: 40%;
+    padding: 0p;
 }
 
 [type="submit"] {
-    border: 2px solid rgba(0,255,0,0.4);
+    border: 2px solid white;
     border-radius: 5px;
+    margin-top: 0px;
+
+}
+
+[type="text"] {
+    margin-bottom: 3rem;
 }
 
 [type="submit"]:not([disabled]) {
@@ -23,7 +29,7 @@ input {
 
 input[disabled] {
     color: white;
-    background-color: red;
+    background-color: dark;
     opacity: 0.4;
     cursor: not-allowed;
 }
