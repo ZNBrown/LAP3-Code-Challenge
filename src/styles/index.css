@@ -1,27 +1,25 @@
-@import './variables.css';
+:root {
+    --light-grey: rgb(204 202 202);
+    --blue: #2d9fd9;
+    --canvas: #DAE0E6;
+}
 
-* { box-sizing: border-box; }
-
+* {
+    box-sizing: border-box;
+}
+  
 body {
-    font-family: var(--font-primary);
     margin: 0;
-    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--canvas);
 }
-
-main {
-    padding: 50px;
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
 }
-
-input, button {
-    border: none;
-    font-family: var(--font-primary);
-    text-transform: uppercase;
-    background-color: var(--opacity);
-    color: var(--secondary)
-}
-
-[type="text"] {
-    border: 1px solid olive;
-    border-radius: 5px;
-    text-align: center;
-}
+  
