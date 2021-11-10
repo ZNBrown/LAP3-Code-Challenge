@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { SearchForm, Result} from '../../components';
 
 export const Search = () => {
-    //const error = useSelector(state => state.error)
+    const error = useSelector(state => state.error)
 
     return (
         <div id="search">
