@@ -1,20 +1,56 @@
 {
-  "name": "LAP3-Code-Challenge",
+  "name": "lap_3_code_challenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack serve --config config/webpack.config.dev.js",
+    "build": "webpack --config config/webpack.config.production.js",
+    "test": "jest --watch --silent --setupFilesAfterEnv ./src/test/setupTests.js",
+    "coverage": "jest --silent --setupFilesAfterEnv ./src/test/setupTests.js --coverage --watchAll=false",
+    "autograde": "jest --silent --setupFilesAfterEnv ./src/test/setupTests.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZNBrown/LAP3-Code-Challenge.git"
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/actions/"
+    ],
+    "testEnvironment": "jsdom"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ZNBrown/LAP3-Code-Challenge/issues"
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.4",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^27.3.1",
+    "redux-devtools-extension": "^2.13.9",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.8.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^4.4.0"
   },
-  "homepage": "https://github.com/ZNBrown/LAP3-Code-Challenge#readme"
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "5.2.0",
+    "redux": "^4.0.5"
+  }
 }
