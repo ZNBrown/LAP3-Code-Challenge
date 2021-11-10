@@ -41,7 +41,7 @@ export const Repo = () => {
         fetchRepos();
     }, [username])
 
-        const renderRepoList = () => Repo.map((r, i) => <Card key ={i} repoName={r.repoName} forks={r.forks} url={r.url} openIssues={r.openIssues} language={language} watchers={watchers}/>)
+        const renderRepoList = () => showRepos.map((r, i) => <Card key ={i} repoName={r.repoName} forks={r.forks} url={r.url} openIssues={r.openIssues} language={r.language} watchers={r.watchers}/>)
         return (
             <div id = "list">
                 <SearchForm updateUsername={updateUsername}/>

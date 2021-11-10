@@ -9,7 +9,7 @@ function App() {
         <div id="app">
             <main>
                 <Pages.Search/>
-                <Repo/>
+                {/* <Repo/> */}
             </main>
         </div>
     )
