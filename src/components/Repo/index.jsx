@@ -14,6 +14,7 @@ export const Repo = () => {
         async function fetchRepos() {
             try {
                 setError(null)
+                if (username === "") setError("Oh no, there are no public repos for this user");
                 let { data } = await axios.get(`https://api.github.com/users/${username}/repos`);
                 if (!data.length) {
                     setError("Oh no, there are no public repos for this user");
