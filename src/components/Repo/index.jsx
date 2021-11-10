@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import { Card } from '../RepoCard'
+import { SearchForm } from '../SearchForm';
 
 export const Repo = () => {
     const [showRepos, setShowRepos] = useState();
@@ -9,7 +11,7 @@ export const Repo = () => {
     const updateUsername = (value) => {
         setUsername(value);
     }
-    
+
     useEffect (() => {
         async function fetchRepos() {
             try {
@@ -38,4 +40,13 @@ export const Repo = () => {
 
         fetchRepos();
     }, [username])
-}
+
+        const renderRepoList = () => Repo.map((r, i) => <Card key ={i} repoName={r.repoName} forks={r.forks} url={r.url} openIssues={r.openIssues} language={language} watchers={watchers}/>)
+        return (
+            <div id = "list">
+                <SearchForm updateUsername={updateUsername}/>
+                {error ? <p>{error}</p> : renderRepoList()}
+            </div>
+        )
+    
+    }

@@ -28,7 +28,7 @@ export const SearchForm = () => {
 
     return (
     <form onSubmit={handleSubmit} aria-label>
-        <label htmlFor="text">Name</label>
+        <label htmlFor="text">GitHub username</label>
         <input type="text" id="name"  onChange={handleInput} /> 
         <input
             type="submit"
