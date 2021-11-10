@@ -3,7 +3,19 @@
     --blue: #2d9fd9;
     --canvas: #DAE0E6;
 }
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: var(--canvas);
+        color: black;
+	}
+}
 
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+        color: white;
+	}
+}
 * {
     box-sizing: border-box;
 }
@@ -15,7 +27,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--canvas);
+    
 }
   
 code {

@@ -1,13 +1,17 @@
-nav {
+.header {
     width: 100vw;
     position: fixed;
-    background-color: beige;
-    padding: 30px;
+    background-color: #1a1a1c;
+    border: 1px solid white;
     display: flex;
     justify-content: space-around;
     color: grey;
     top: 0;
+    display: inline-block;
+}
 
+h1 {
+    size: 2rem;
 }
 
 a {
@@ -21,4 +25,10 @@ a:hover {
 .current {
     color: black;
     font-weight: bolder;
+}
+
+img {
+    height: 10%;
+    width: 10%;
+    margin: 20px;
 }
