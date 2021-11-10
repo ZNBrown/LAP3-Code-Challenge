@@ -14,23 +14,29 @@ export const Repo = () => {
         async function fetchRepos() {
             try {
                 setError(null)
-                if (username === "") setError("Oh no, there are no public repos for this user");
-                let { data } = await axios.get(`https://api.github.com/users/${username}/repos`);
-                if (!data.length) {
-                    setError("Oh no, there are no public repos for this user");
-                } else {
-                    const result = data.reverse().map(result => {
-                        let repoName = result.name;
-                        let url = result.html_url;
-                        let forks = result.forks;
-                        let openIssues = result.open_issues;
-                        let watchers = result.watchers;
-                        let language = result.language;
-                        return {repoName, url, forks, openIssues, watchers, language};
-                    });
-                    setShowRepos(result);
-                    setLoading(true)
+                if (username === "") 
+                {
+                    setError("");
                 }
+                else
+                {
+                    let { data } = await axios.get(`https://api.github.com/users/${username}/repos`);
+                    if (!data.length) {
+                        setError("Oh no, there are no public repos for this user");
+                    } else {
+                        const result = data.reverse().map(result => {
+                            let repoName = result.name;
+                            let url = result.html_url;
+                            let forks = result.forks;
+                            let openIssues = result.open_issues;
+                            let watchers = result.watchers;
+                            let language = result.language;
+                            return {repoName, url, forks, openIssues, watchers, language};
+                        });
+                        setShowRepos(result);
+                        setLoading(true)
+                }
+            }
             } catch (err) {
                 console.warn(err);
                 setError("This user does not exist")
