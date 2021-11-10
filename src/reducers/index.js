@@ -1,6 +1,6 @@
 const initState = {
-    name: "",
-    isLoading: false
+    username: "",
+    isLoading: true
 };
 
 export const searchReducer = (state=initState, action) => {
@@ -10,7 +10,7 @@ export const searchReducer = (state=initState, action) => {
         case 'LOADED':
             return { ...state, isLoading: false };
         case 'UPDATE_NAME':
-            return { ...state, name: action.payload };
+            return { ...state, username: action.payload };
         case 'SET_ERROR':
             return { ...state, error: action.payload, isLoading: false }
         default:

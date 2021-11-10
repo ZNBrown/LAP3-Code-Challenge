@@ -1,10 +1,14 @@
 import React from 'react';
 //this is bodged because we have to export default in navbar for the test to work
 import * as Pages from './pages';
+<<<<<<< HEAD
 import { Header, Footer } from './layout';
 
 
 
+=======
+import {Repo} from './components/Repo'
+>>>>>>> staging
 
 
 function App() {
@@ -13,6 +17,7 @@ function App() {
             <Header/>
             <main>
                 <Pages.Search/>
+                <Repo/>
             </main>
             <Footer/>
         </div>
