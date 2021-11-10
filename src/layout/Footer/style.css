@@ -1,7 +1,9 @@
 #footer {
     width: 100vw;
-    position: fixed;
     bottom: 0;
+    position: absolute;
+    bottom: 0;
+
     background-color: #1a1a1c;
-    padding: 20px;
+    padding: 40px;
 }

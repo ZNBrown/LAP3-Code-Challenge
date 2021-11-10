@@ -27,12 +27,7 @@ export const SearchForm = () => {
 
     return (
     <form onSubmit={handleSubmit} aria-label>
-<<<<<<< HEAD
         <input type="text" id="name"  placeholder="Username" onChange={handleInput} /> 
-=======
-        <label htmlFor="text">GitHub username</label>
-        <input type="text" id="name"  onChange={handleInput} /> 
->>>>>>> staging
         <input
             type="submit"
             disabled={formAlert}

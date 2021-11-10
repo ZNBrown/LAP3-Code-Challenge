@@ -1,26 +1,23 @@
 import React from 'react';
 //this is bodged because we have to export default in navbar for the test to work
 import * as Pages from './pages';
-<<<<<<< HEAD
-import { Header, Footer } from './layout';
-
-
-
-=======
 import {Repo} from './components/Repo'
->>>>>>> staging
+import {Header, Footer} from './layout'
 
 
 function App() {
     return (
+        <React.Fragment>
         <div id="app">
             <Header/>
             <main>
-                <Pages.Search/>
-                <Repo/>
+            <Pages.Search/>
+            <Repo/>
             </main>
-            <Footer/>
+            
         </div>
+        <Footer/>
+        </React.Fragment>
     )
 }
 
