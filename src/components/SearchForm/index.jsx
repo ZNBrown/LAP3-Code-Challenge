@@ -5,8 +5,8 @@ import { useDispatch } from 'react-redux';
 import './style.css';
 
 export const SearchForm = () => {
-    // const dispatch = useDispatch();
-    //     dispatch(updateDate(dateInput))
+    const dispatch = useDispatch();
+
 
     const [ formData, setFormData ] = useState("")
     const [ formAlert, setFormAlert ] = useState("Type a name");
@@ -24,6 +24,7 @@ export const SearchForm = () => {
         e.preventDefault()
         console.log(e.target[0].value)
         console.log('submitted')
+        dispatch({ type: 'UPDATE_NAME', payload: e.target[0].value})
     }
 
     return (
