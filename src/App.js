@@ -8,13 +8,12 @@ import {Header, Footer} from './layout'
 function App() {
     return (
         <React.Fragment>
+        <Header/>
         <div id="app">
-            <Header/>
             <main>
             <Pages.Search/>
             <Repo/>
             </main>
-            
         </div>
         <Footer/>
         </React.Fragment>

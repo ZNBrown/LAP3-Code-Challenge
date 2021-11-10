@@ -1,8 +1,5 @@
 #footer {
-    width: 100vw;
-    bottom: 0;
-    position: sticky;
+    flex-shrink: 0;
     background-color: #1a1a1c;
     padding: 40px;
-    margin-top: -50px;
 }
