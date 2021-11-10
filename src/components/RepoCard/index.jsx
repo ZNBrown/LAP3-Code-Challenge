@@ -1,4 +1,6 @@
 import React from 'react'
+import './style.css';
+
 
 export const Card = ({ repoName, url, forks, openIssues, watchers, language}) => {
     return (

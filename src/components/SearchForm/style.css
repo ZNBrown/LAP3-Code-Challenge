@@ -29,7 +29,7 @@ input {
 
 input[disabled] {
     color: white;
-    background-color: dark;
+    background-color: lightcoral;
     opacity: 0.4;
     cursor: not-allowed;
 }
