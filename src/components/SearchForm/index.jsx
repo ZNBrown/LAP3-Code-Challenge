@@ -23,6 +23,7 @@ export const SearchForm = () => {
         console.log(e.target[0].value)
         console.log('submitted')
         dispatch({ type: 'UPDATE_NAME', payload: e.target[0].value})
+        e.target[0].value =""
     }
 
     return (
